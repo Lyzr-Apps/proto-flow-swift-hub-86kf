@@ -1,0 +1,126 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Input",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "product_chatbot_agent",
+        "type": "Agent",
+        "label": "Product Chatbot Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6996e9c70de62bcad95a8abc",
+        "has_kb": true,
+        "rag_id": "6996e9543dc9e9e52824051f"
+      },
+      {
+        "id": "underwriting_risk_agent",
+        "type": "Agent",
+        "label": "Underwriting Risk Analyzer Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6996e9adf908c28cb54245a1"
+      },
+      {
+        "id": "policy_draft_agent",
+        "type": "Agent",
+        "label": "Policy Draft Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6996e9ad229adca5a90509a0"
+      },
+      {
+        "id": "claim_fraud_agent",
+        "type": "Agent",
+        "label": "Claim Fraud Detector Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6996e9ae12d3d03d3b00b756"
+      },
+      {
+        "id": "claim_decision_agent",
+        "type": "Agent",
+        "label": "Claim Decision Agent",
+        "nodeCategory": "agent",
+        "agent_id": "6996e9ae744b96afe6ba6ac8"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "product_chatbot_agent"
+      },
+      {
+        "source": "input_node",
+        "target": "underwriting_risk_agent"
+      },
+      {
+        "source": "underwriting_risk_agent",
+        "target": "policy_draft_agent"
+      },
+      {
+        "source": "input_node",
+        "target": "claim_fraud_agent"
+      },
+      {
+        "source": "claim_fraud_agent",
+        "target": "claim_decision_agent"
+      }
+    ]
+  },
+  "agents": [
+    {
+      "node_id": "product_chatbot_agent",
+      "agent_id": "6996e9c70de62bcad95a8abc",
+      "name": "Product Chatbot Agent",
+      "description": "Answers customer and agent questions about Askrindo insurance products, coverage details, premiums, and processes by searching the product knowledge base",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.3,
+      "top_p": 1,
+      "has_kb": true,
+      "rag_id": "6996e9543dc9e9e52824051f",
+      "rag_name": "askrindoproductkbbsb1"
+    },
+    {
+      "node_id": "underwriting_risk_agent",
+      "agent_id": "6996e9adf908c28cb54245a1",
+      "name": "Underwriting Risk Analyzer Agent",
+      "description": "Analyzes uploaded applicant documents, extracts key data, calculates risk score using predefined criteria, and generates underwriting recommendation with detailed rationale",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.2,
+      "top_p": 1
+    },
+    {
+      "node_id": "policy_draft_agent",
+      "agent_id": "6996e9ad229adca5a90509a0",
+      "name": "Policy Draft Agent",
+      "description": "Generates policy terms, conditions, premium calculations, and coverage details based on the approved risk assessment output from the Underwriting Risk Analyzer",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.4,
+      "top_p": 1
+    },
+    {
+      "node_id": "claim_fraud_agent",
+      "agent_id": "6996e9ae12d3d03d3b00b756",
+      "name": "Claim Fraud Detector Agent",
+      "description": "Analyzes submitted claim documents and details against fraud indicators, produces fraud probability score and detailed analysis",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.2,
+      "top_p": 1
+    },
+    {
+      "node_id": "claim_decision_agent",
+      "agent_id": "6996e9ae744b96afe6ba6ac8",
+      "name": "Claim Decision Agent",
+      "description": "Generates final claim adjudication recommendation including approval/denial decision, payout calculation, conditions, and supporting rationale based on fraud analysis results",
+      "model": "gpt-4.1",
+      "provider": "openai",
+      "temperature": 0.3,
+      "top_p": 1
+    }
+  ]
+}

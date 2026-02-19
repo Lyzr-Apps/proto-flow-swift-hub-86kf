@@ -1,0 +1,42 @@
+{
+  "agent_name": "Claim Fraud Detector Agent",
+  "agent_id": "6996e9ae12d3d03d3b00b756",
+  "description": "Analyzes submitted claim documents and details against fraud indicators, produces fraud probability score and detailed analysis",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "fraud_score": "number",
+    "risk_level": "string",
+    "claim_summary": "string",
+    "timing_analysis": "string",
+    "financial_analysis": "string",
+    "pattern_analysis": "string",
+    "document_analysis": "string",
+    "fraud_indicators": "string",
+    "red_flags": "string",
+    "recommended_actions": "string",
+    "overall_assessment": "string"
+  },
+  "example_response": {
+    "fraud_score": 0,
+    "risk_level": "LOW, MODERATE, HIGH, or CRITICAL",
+    "claim_summary": "Brief summary of the claim analyzed",
+    "timing_analysis": "Analysis of timing-related fraud indicators",
+    "financial_analysis": "Analysis of financial fraud indicators",
+    "pattern_analysis": "Analysis of pattern-based fraud indicators",
+    "document_analysis": "Analysis of document authenticity and completeness",
+    "fraud_indicators": "JSON string array of all fraud indicators checked with their status",
+    "red_flags": "JSON string array of identified red flags",
+    "recommended_actions": "Recommended next steps based on fraud analysis",
+    "overall_assessment": "Comprehensive narrative assessment of fraud risk"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/file.pdf"
+      }
+    ]
+  }
+}

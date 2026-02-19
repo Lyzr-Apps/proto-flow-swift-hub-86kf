@@ -1,0 +1,38 @@
+{
+  "agent_name": "Claim Decision Agent",
+  "agent_id": "6996e9ae744b96afe6ba6ac8",
+  "description": "Generates final claim adjudication recommendation including approval/denial decision, payout calculation, conditions, and supporting rationale based on fraud analysis results",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "decision": "string",
+    "decision_label": "string",
+    "claimed_amount": "string",
+    "approved_amount": "string",
+    "payout_breakdown": "string",
+    "deductible_applied": "string",
+    "net_payout": "string",
+    "decision_rationale": "string",
+    "fraud_reference": "string",
+    "conditions": "string",
+    "compliance_status": "string",
+    "next_steps": "string",
+    "adjudicator_notes": "string"
+  },
+  "example_response": {
+    "decision": "APPROVE_FULL, APPROVE_PARTIAL, APPROVE_CONDITIONS, DENY_FRAUD, DENY_EXCLUSION, DENY_LAPSED, or ESCALATE",
+    "decision_label": "Human-readable decision label",
+    "claimed_amount": "Original claimed amount",
+    "approved_amount": "Approved payout amount (0 if denied)",
+    "payout_breakdown": "Detailed breakdown of payout calculation",
+    "deductible_applied": "Deductible amount applied",
+    "net_payout": "Final net payout amount in Rupiah",
+    "decision_rationale": "Comprehensive rationale for the decision",
+    "fraud_reference": "Reference to fraud analysis results and how they influenced the decision",
+    "conditions": "Any conditions attached to the decision",
+    "compliance_status": "Regulatory and internal compliance check results",
+    "next_steps": "Required next steps for processing",
+    "adjudicator_notes": "Additional notes for the claims file"
+  }
+}

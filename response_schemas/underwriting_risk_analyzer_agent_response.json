@@ -1,0 +1,34 @@
+{
+  "agent_name": "Underwriting Risk Analyzer Agent",
+  "agent_id": "6996e9adf908c28cb54245a1",
+  "description": "Analyzes uploaded applicant documents, extracts key data, calculates risk score using predefined criteria, and generates underwriting recommendation with detailed rationale",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "risk_score": "number",
+    "risk_level": "string",
+    "decision": "string",
+    "applicant_summary": "string",
+    "key_findings": "string",
+    "financial_analysis": "string",
+    "industry_risk_assessment": "string",
+    "document_verification": "string",
+    "risk_factors": "string",
+    "recommendation_rationale": "string",
+    "suggested_conditions": "string"
+  },
+  "example_response": {
+    "risk_score": 0,
+    "risk_level": "Low, Medium, or High",
+    "decision": "APPROVE, REFER, or DECLINE",
+    "applicant_summary": "Brief summary of the applicant",
+    "key_findings": "JSON string array of key findings from the analysis",
+    "financial_analysis": "Detailed financial health analysis",
+    "industry_risk_assessment": "Industry-specific risk evaluation",
+    "document_verification": "JSON string array of document verification statuses",
+    "risk_factors": "JSON string array of identified risk factors with severity",
+    "recommendation_rationale": "Detailed explanation for the underwriting recommendation",
+    "suggested_conditions": "Any special conditions or requirements if approved"
+  }
+}

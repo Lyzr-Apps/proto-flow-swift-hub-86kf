@@ -1,0 +1,48 @@
+{
+  "agent_name": "Policy Draft Agent",
+  "agent_id": "6996e9ad229adca5a90509a0",
+  "description": "Generates policy terms, conditions, premium calculations, and coverage details based on the approved risk assessment output from the Underwriting Risk Analyzer",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "policy_number": "string",
+    "policy_type": "string",
+    "policyholder": "string",
+    "effective_date": "string",
+    "expiry_date": "string",
+    "coverage_amount": "string",
+    "coverage_details": "string",
+    "premium_calculation": "string",
+    "total_premium": "string",
+    "payment_terms": "string",
+    "terms_and_conditions": "string",
+    "exclusions": "string",
+    "special_provisions": "string",
+    "endorsements": "string"
+  },
+  "example_response": {
+    "policy_number": "Generated policy number",
+    "policy_type": "Type of insurance policy",
+    "policyholder": "Name of the policyholder",
+    "effective_date": "Policy start date",
+    "expiry_date": "Policy end date",
+    "coverage_amount": "Total coverage/sum insured amount",
+    "coverage_details": "Detailed coverage scope and perils",
+    "premium_calculation": "Detailed premium breakdown including base rate, adjustments, and total",
+    "total_premium": "Total premium amount in Rupiah",
+    "payment_terms": "Payment schedule and terms",
+    "terms_and_conditions": "General and specific policy terms",
+    "exclusions": "Policy exclusions",
+    "special_provisions": "Any special conditions or requirements",
+    "endorsements": "Any policy endorsements or amendments"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/file.pdf"
+      }
+    ]
+  }
+}

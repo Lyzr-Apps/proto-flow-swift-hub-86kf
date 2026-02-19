@@ -1,0 +1,30 @@
+{
+  "agents": {
+    "product_chatbot_agent": {
+      "agent_id": "6996e9c70de62bcad95a8abc",
+      "name": "Product Chatbot Agent",
+      "has_kb": true,
+      "rag_id": "6996e9543dc9e9e52824051f"
+    },
+    "underwriting_risk_agent": {
+      "agent_id": "6996e9adf908c28cb54245a1",
+      "name": "Underwriting Risk Analyzer Agent"
+    },
+    "policy_draft_agent": {
+      "agent_id": "6996e9ad229adca5a90509a0",
+      "name": "Policy Draft Agent"
+    },
+    "claim_fraud_agent": {
+      "agent_id": "6996e9ae12d3d03d3b00b756",
+      "name": "Claim Fraud Detector Agent"
+    },
+    "claim_decision_agent": {
+      "agent_id": "6996e9ae744b96afe6ba6ac8",
+      "name": "Claim Decision Agent"
+    }
+  },
+  "knowledge_base": {
+    "rag_id": "6996e9543dc9e9e52824051f",
+    "rag_name": "askrindoproductkbbsb1"
+  }
+}

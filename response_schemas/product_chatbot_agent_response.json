@@ -1,0 +1,26 @@
+{
+  "agent_name": "Product Chatbot Agent",
+  "agent_id": "6996e9c70de62bcad95a8abc",
+  "description": "Answers customer and agent questions about Askrindo insurance products, coverage details, premiums, and processes by searching the product knowledge base",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "answer": "string",
+    "product_referenced": "string",
+    "confidence": "string"
+  },
+  "example_response": {
+    "answer": "The detailed answer to the user question about Askrindo products",
+    "product_referenced": "The specific Askrindo product referenced in the answer, if any",
+    "confidence": "High, Medium, or Low confidence in the answer accuracy"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/file.pdf"
+      }
+    ]
+  }
+}
